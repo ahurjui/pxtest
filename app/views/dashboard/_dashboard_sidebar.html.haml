@@ -4,10 +4,6 @@
             %input.form-control{:placeholder => "Search", :type => "text"}
     %ul.nav.menu
         %li.parent
-            %ul#facebook-pages.children.collapse.in
-                %li
-                    #{link_to "Login", '/dashboard/fivehundred/login', {:id => "fivehundred-login-page"}}
+            %ul.children.collapse.in
                 %li
                     #{link_to "Photos", '/dashboard/fivehundred/photos', {:id => "fivehundred-photos-page"}}
-                %li
-                    #{link_to "Credentials", '/dashboard/fivehundred/credentials', {:id => "fivehundred-credentials-page"}}

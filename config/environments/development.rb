@@ -38,4 +38,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  Rails.configuration.x.fivehundred.base_url = 'https://api.500px.com'
+  Rails.configuration.x.fivehundred.consumer_key = 'SyvXFhXG9xXgDz3zWWad3DCBMnNUNZ511UxY7oWI'
+  Rails.configuration.x.fivehundred.consumer_secret = 'Yp3jhMB1c1O5dHEpLi9obijciii78o5V64WGh4Du'
 end

@@ -1,0 +1,16 @@
+.row
+    .col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-md-4.col-md-offset-4
+        .login-panel.panel.panel-default
+            .panel-heading Log in
+            - if flash[:error]
+                .panel-body.error
+                    #{flash[:error]}
+            .panel-body
+                = form_tag '/login' do
+                    %fieldset
+                        .form-group
+                            #{text_field_tag :username, "AndreiHurjui", {:class => "form-control", :placeholder => "500px Username", :type => "text", :autofocus => ""}}
+                        .form-group
+                            #{password_field_tag :password, "secretpass", {:class => "form-control", :placeholder => "500px Password"}}
+                        .form-group
+                            \#{submit_tag "Submit", {:class => "btn btn-primary"}}

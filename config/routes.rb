@@ -2,13 +2,13 @@ Rails.application.routes.draw do
   
   root to: 'dashboard#index'
 
-  get '/login' => 'sessions#new'
+  get '/login' => 'sessions#login'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   
   get '/signup' => 'users#new'
   post '/users' => 'users#create', :only => [:show, :new, :create]
-  
+
   get '/cool' => 'gif#cool'
   get '/sweet' => 'gif#sweet'
 

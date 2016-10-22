@@ -51,3 +51,5 @@ gem 'haml-rails'
 
 # gem 'handlebars_assets'
 gem 'handlebars_assets', github: 'leshill/handlebars_assets'
+
+gem "oauth"
