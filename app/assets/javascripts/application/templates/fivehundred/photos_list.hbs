@@ -1,0 +1,46 @@
+<div class="bootstrap-table">
+    <div class="fixed-table-toolbar"></div>
+    <div class="fixed-table-container">
+        <div class="fixed-table-header">
+            <table></table>
+        </div>
+        <div class="fixed-table-body">
+            <div class="fixed-table-loading" style="top: 37px; display: none;">Loading, please wait…</div>
+            <table data-toggle="table" data-url="tables/data2.json" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="th-inner ">Item ID</div>
+                            <div class="fht-cell"></div>
+                        </th>
+                        <th style="">
+                            <div class="th-inner ">Item Name</div>
+                            <div class="fht-cell"></div>
+                        </th>
+                        <th style="">
+                            <div class="th-inner ">Item Url</div>
+                            <div class="fht-cell"></div>
+                        </th>
+                        <th style="">
+                            <div class="th-inner ">Actions</div>
+                            <div class="fht-cell"></div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each this}}
+                        <tr>
+                            <td>{{attributes.id}}</td>
+                            <td>{{attributes.name}}</td>
+                            <td><img class="image-small-list" src="{{attributes.image_url}}"></td>
+                            <td>
+                                <button data-id="{{attributes.id}}" type="button" class="btn btn-primary action-like">Like image</button>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="fixed-table-pagination"></div>
+    </div>
+</div>

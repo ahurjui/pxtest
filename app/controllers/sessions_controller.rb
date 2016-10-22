@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
 
     def create
         access_token = get_access_token params[:username], params[:password]
-        session[:access_token] = access_token
 
         if access_token
             session[:username] = params[:username]
@@ -24,9 +23,6 @@ class SessionsController < ApplicationController
         if session[:username]
             redirect_to '/'
         end
-
-
-        p flash[:error]
     end
 
 end
