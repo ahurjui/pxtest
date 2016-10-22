@@ -37,13 +37,15 @@ _(App).extend
     LoggedUser: {}
     CurrentView: null
     $: jQuery
+    FivehundredBaseUrl: 'https://api.500px.com/v1'
 
     rootUrl: =>
         pathArray = location.href.split( '/' )
         protocol = pathArray[0]
         host = pathArray[2]
         url = protocol + '//' + host
-        url = url + "/api/"
+        #url = url + "/api/"
+        url = "/"
         url
 
     logoutUrl: =>

@@ -60,21 +60,3 @@ class App.Model extends Backbone.Model
             for k in @hasMany
                 json[k] = @get(k).toJSON() if @has(k)
         super
-
-    sync: (method, model, options) ->
-
-        if model and (method == 'create' or method == 'update' or method == 'patch' or method == "save" or method == "update")
-            options.contentType = 'application/json'
-
-            _.extend options.data, 'access_token': App.LoggedUser.get("access_token")
-
-            if method == "update"
-                model.urlRoot = model.urlRoot + "/" + model.get("id")
-
-            model.urlRoot = model.urlRoot + "?access_token=" + App.LoggedUser.get("access_token")
-            model.set("access_token", App.LoggedUser.get("access_token"))
-
-            if method == "update"
-                options.url = model.urlRoot + "&id=" + model.get("id")
-
-        _sync.call this, method, model, options

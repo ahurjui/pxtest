@@ -12,20 +12,3 @@ class App.Collection extends Backbone.Collection
                 parsed = super(v)
 
         parsed
-
-    sync: (method, collection, options) ->
-        if collection and (method == 'create' or method == 'update' or method == 'patch' or method == "save" or method == "update")
-            options.contentType = 'application/json'
-            options.data = JSON.stringify(options.attrs or collection.toJSON())
-
-        _.extend options.data, 'access_token': App.LoggedUser.get("access_token")
-
-        if collection and (method == "read")
-            collection.urlRoot = collection.url + "?access_token=" + App.LoggedUser.get("access_token")
-
-        if options.url
-            options.url = options.url + "?access_token=" + App.LoggedUser.get("access_token")
-        else
-            options.url = collection.urlRoot
-
-        _sync.call this, method, collection, options

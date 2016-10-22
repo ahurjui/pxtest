@@ -9,7 +9,7 @@
             %ul.user-menu
                 %li.dropdown.pull-right
                     - if current_user
-                        Signed in as #{current_user} | #{link_to "Logout", '/logout', { "data-action" => "logout"} }
+                        Signed in as #{current_user['username']} | #{link_to "Logout", '/logout', { "data-action" => "logout"} }
                         |
                     - else
                         = link_to 'Login', '/login'
