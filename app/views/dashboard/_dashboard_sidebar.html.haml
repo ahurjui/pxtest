@@ -1,0 +1,13 @@
+#sidebar-collapse.col-sm-3.col-lg-2.sidebar.collapse.in
+    %form{:role => "search"}
+        .form-group
+            %input.form-control{:placeholder => "Search", :type => "text"}
+    %ul.nav.menu
+        %li.parent
+            %ul#facebook-pages.children.collapse.in
+                %li
+                    #{link_to "Login", '/dashboard/fivehundred/login', {:id => "fivehundred-login-page"}}
+                %li
+                    #{link_to "Photos", '/dashboard/fivehundred/photos', {:id => "fivehundred-photos-page"}}
+                %li
+                    #{link_to "Credentials", '/dashboard/fivehundred/credentials', {:id => "fivehundred-credentials-page"}}
