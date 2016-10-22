@@ -1,7 +1,7 @@
 $ ->
     Backbone.history.start pushState: true
 
-    $(document).on 'click', 'a', (e) ->
+    $(document).on 'click', 'a:not[data-action]', (e) ->
         e.preventDefault()
 
         # This is important
