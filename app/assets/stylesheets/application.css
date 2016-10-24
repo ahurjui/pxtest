@@ -18,3 +18,7 @@
 .panel-body.error {
     color: red;
 }
+
+table.photos-list > tbody > tr > td {
+    vertical-align: middle;
+}

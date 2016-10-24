@@ -1,5 +1,9 @@
 App = Fivehundred.Test
 
+Handlebars.registerHelper 'enumeConstat', (enumPath) ->
+    enumValue = eval(enumPath)
+    enumValue
+
 Handlebars.registerHelper 'eachWithIndex', (array, options) ->
     buffer = for item, idx in array
         options.fn(_.extend(item, {
