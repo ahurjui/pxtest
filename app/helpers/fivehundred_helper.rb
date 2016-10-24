@@ -13,6 +13,8 @@ module FivehundredHelper
 
         if @@access_token != nil
             return @@access_token
+        elseif @@access_token == nil && username == nill && password == nil
+            return nil
         end
 
         consumer = OAuth::Consumer.new(Rails.application.config.x.fivehundred.consumer_key, Rails.application.config.x.fivehundred.consumer_secret, {

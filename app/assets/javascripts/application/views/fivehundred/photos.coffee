@@ -20,5 +20,3 @@ App.module 'Views.Fivehundred',
                 @photosTableView = new App.Views.Fivehundred.PhotosList()
 
             @photosTableView.render(@photosCollection.models)
-
-            console.log @photosCollection
