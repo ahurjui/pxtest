@@ -4,4 +4,4 @@ $ = App.$
 App.module 'Models',
   Photo: class extends App.Model
       klass: 'photo'
-      urlRoot: '/photos'
+      urlRoot: App.rootUrl() + '/photos'

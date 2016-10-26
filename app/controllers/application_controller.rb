@@ -16,5 +16,15 @@ class ApplicationController < ActionController::Base
 
   def authorize
     redirect_to '/login' unless current_user['username']
+
+    @access_token = get_access_token()
+    if @access_token == nil
+      resp = Array.new
+      respond_to do |format|
+        format.json { render :json => [], :status => 401 }
+      end
+      return
+    end
+
   end
 end
