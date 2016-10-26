@@ -15,4 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
+.idea/*
 .idea/workspace.xml
+/config/database.yml
+Gemfile.lock
+.ruby-version
+.ruby-gemset
+.project
