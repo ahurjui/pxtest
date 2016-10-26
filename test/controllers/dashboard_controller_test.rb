@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class DashboardControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+    test "can see the redirect to login page" do
+        get "index"
+        assert_response :redirect
+    end
 end

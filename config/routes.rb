@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   root to: 'dashboard#index'
 
+  get '/' => 'dashboard#index'
+
   get '/photos' => 'photos#index'
   post '/photos/:photo_id/:action/:value' => 'photos#:action'
 
