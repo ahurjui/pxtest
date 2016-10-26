@@ -20,4 +20,4 @@
 //= require application/namespace
 //= require application/app
 
-//= require_tree ../../../vendor/assets/javascripts/lumino
+//= require_tree ../../../vendor/assets/javascripts

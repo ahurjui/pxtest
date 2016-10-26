@@ -1,2 +1,0 @@
-module GifHelper
-end
