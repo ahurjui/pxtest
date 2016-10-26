@@ -1,6 +1,9 @@
 $(document).ajaxError (event, xhr) ->
     if xhr.status == 401
-        window.location.href = 'logout'
+        if !location.origin
+            location.origin = location.protocol + '//' + location.host
+
+        window.location.href = location.origin + '/logout'
     return
 
 $ ->
@@ -14,6 +17,6 @@ $ ->
         href = $(e.currentTarget).attr('href')
 
         router = new Backbone.Router
-        router.navigate href, true # <- this part will pass the path to your router
+        router.navigate href, true
 
         return
