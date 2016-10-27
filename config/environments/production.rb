@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  Rails.configuration.x.fivehundred.base_url = 'https://api.500px.com'
+  Rails.configuration.x.fivehundred.consumer_key = 'fI4EeYgGUq4wKt6ahfAbVFnn9Em3BDAIfp3zVduX'
+  Rails.configuration.x.fivehundred.consumer_secret = 'dX3I8OrnEwNbl5qx5j5FVBUebU4HnLHs5uxj12Ds'
 end
