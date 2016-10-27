@@ -14,6 +14,7 @@ Project specifications and recomandations
     Please run the follwoing commands in the same order:
      - cloning the repository - git clone https://github.com/ahurjui/pxtest
      - go to project's root directory - cd pxtest
+     - run the following commad to have the latest developed version: git checkout develop
      - run the following command - bundle install
      - run the following command, database initialization - rake db:migrate
      - run: rails s
