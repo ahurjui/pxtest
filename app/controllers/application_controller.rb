@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
     include FivehundredHelper
 
+    # Gets the current logged user if any and sends it into the view to be loaded in app js
+    # @return [Object] - the current logged user username and token
     def current_user
         access_token = get_access_token()
         username ||= session[:username] if session[:username]
@@ -14,6 +16,8 @@ class ApplicationController < ActionController::Base
     end
     helper_method :current_user
 
+    # Checks if we have a logged user and redirects the action to login if we do not have any
+    # Checks fi we have the access_token object, if not answer with 401 unauthorized
     def authorize
         redirect_to '/login' unless current_user['username']
 
