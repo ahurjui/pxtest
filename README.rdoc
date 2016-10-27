@@ -1,28 +1,28 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Small test application:
+    Login to application using 500px credentials
+    Retrieve the top 100 populat photos
+    Vote action for 1 photo
 
-Things you may want to cover:
+Project specifications and recomandations
 
 * Ruby version
+    2.3.0
 
-* System dependencies
+* Installing project
+    Please run the follwoing commands in the same order:
+     - cloning the repository - git clone https://github.com/ahurjui/pxtest
+     - go to project's root directory - cd pxtest
+     - run the following commad to have the latest developed version: git checkout develop
+     - run the following command - bundle install
+     - run the following command, database initialization - rake db:migrate
+     - run: rails s
+     - run the application in your browser and log in using your 500px credentials
+
 
 * Configuration
-
-* Database creation
-
-* Database initialization
+    - no configuration is needed
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+    - inside your project root directory run: bin/rake test
