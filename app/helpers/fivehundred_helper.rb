@@ -6,6 +6,9 @@ module FivehundredHelper
 
     @@access_token = nil
 
+    # The method check if we already have an access_token object and returns that object.
+    # If the methods gets the username and password in method's arguments it will try to authenticate to 500px api
+    #
     # @param [string] username - for 500 px auth
     # @param [string] password - for 500 px auth
     # @return [boolean/object] - false if the auth did not succeed
