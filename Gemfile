@@ -47,6 +47,10 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'haml-rails'
 
 # gem 'handlebars_assets'
